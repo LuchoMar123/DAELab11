@@ -13,7 +13,5 @@ namespace CodeFirstDemo.Models
         
         public  List<Product> Products { get; set; }
 
-
-
     }
 }
