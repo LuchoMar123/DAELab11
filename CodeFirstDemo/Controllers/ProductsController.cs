@@ -123,5 +123,13 @@ namespace CodeFirstDemo.Controllers
             }
             base.Dispose(disposing);
         }
+
+        [HttpPost]
+        public JsonResult getProduct(string name)
+        {
+            var products = db.Products.Where(x => x.Name.Contains(name)).ToList();
+
+            return Json(products, JsonRequestBehavior.AllowGet);
+        }
     }
 }
